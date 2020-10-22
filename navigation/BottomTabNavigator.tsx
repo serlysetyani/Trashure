@@ -1,12 +1,16 @@
 import { Ionicons } from '@expo/vector-icons';
+import { FontAwesome } from '@expo/vector-icons';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { createStackNavigator } from '@react-navigation/stack';
 import * as React from 'react';
 
 import Colors from '../constants/Colors';
 import useColorScheme from '../hooks/useColorScheme';
-import TabOneScreen from '../screens/TabOneScreen';
-import TabTwoScreen from '../screens/TabTwoScreen';
+import Beranda from '../screens/Beranda';
+import Penukaran from '../screens/Penukaran';
+import Scan from '../screens/Scan';
+import Harga from '../screens/Harga';
+import Akun from '../screens/Akun';
 import { BottomTabParamList, TabOneParamList, TabTwoParamList } from '../types';
 
 const BottomTab = createBottomTabNavigator<BottomTabParamList>();
@@ -19,19 +23,41 @@ export default function BottomTabNavigator() {
       initialRouteName="TabOne"
       tabBarOptions={{ activeTintColor: Colors[colorScheme].tint }}>
       <BottomTab.Screen
-        name="TabOne"
-        component={TabOneNavigator}
+        name="Beranda"
+        component={Beranda}
         options={{
-          tabBarIcon: ({ color }) => <TabBarIcon name="ios-code" color={color} />,
+          tabBarIcon: ({ color }) => <TabBarIcon name="ios-home" color={color} />,
         }}
       />
       <BottomTab.Screen
-        name="TabTwo"
-        component={TabTwoNavigator}
+        name="Penukaran"
+        component={Penukaran}
         options={{
-          tabBarIcon: ({ color }) => <TabBarIcon name="ios-code" color={color} />,
+          tabBarIcon: ({ color }) => <FontAwesome name="credit-card-alt" size={22} color={color} />,
         }}
       />
+      <BottomTab.Screen
+        name="Scan"
+        component={Scan}
+        options={{
+          tabBarIcon: ({ color }) => <TabBarIcon name="md-search" color={color} />,
+        }}
+      />
+      <BottomTab.Screen
+        name="Harga"
+        component={Harga}
+        options={{
+          tabBarIcon: ({ color }) => <TabBarIcon name="md-pricetag" color={color} />,
+        }}
+      />
+      <BottomTab.Screen
+        name="Akun"
+        component={Akun}
+        options={{
+          tabBarIcon: ({ color }) => <TabBarIcon name="md-person" color={color} />,
+        }}
+      />
+
     </BottomTab.Navigator>
   );
 }
