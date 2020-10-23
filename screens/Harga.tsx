@@ -2,12 +2,10 @@ import * as React from 'react';
 import { StyleSheet, Image, View, SafeAreaView, ScrollView } from 'react-native';
 
 import { Text } from '../components/Themed';
-import Header from '../components/Header';
 
 export default function TabOneScreen() {
     return (
         <SafeAreaView>
-            <Header textHeader={'Harga Sampah'} />
             <ScrollView>
                 <View style={styles.container}>
                     <View style={styles.card}>
@@ -106,7 +104,7 @@ const styles = StyleSheet.create({
         width: '80%',
     },
     card: {
-        marginTop: 36,
+        marginBottom: 20,
         width: 360,
         height: 240
     }

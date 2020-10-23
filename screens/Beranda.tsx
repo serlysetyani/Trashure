@@ -1,17 +1,16 @@
 import * as React from 'react';
 import { Image, StyleSheet, View } from 'react-native';
-import { ScrollView } from 'react-native-gesture-handler';
+import { ScrollView, TouchableOpacity } from 'react-native-gesture-handler';
 import { SafeAreaView } from 'react-native-safe-area-context';
+import { BarChart } from 'react-native-chart-kit';
 
 import { Text } from '../components/Themed';
-import HeaderBeranda from '../components/HeaderBeranda';
 
 
 export default function Beranda() {
   return (
     <SafeAreaView>
-      <HeaderBeranda textHeader={'Trashure'}>
-      </HeaderBeranda>
+
       <ScrollView>
         <View style={styles.container}>
           <View style={styles.dompetContainer}>
@@ -34,6 +33,44 @@ export default function Beranda() {
             </View>
           </View>
 
+          <View>
+            <BarChart
+              data={{
+                labels: ['Januari', 'Februari', 'Maret', 'April', 'Mei', 'Juni'],
+                datasets: [
+                  {
+                    data: [
+                      Math.random() * 50,
+                      Math.random() * 50,
+                      Math.random() * 50,
+                      Math.random() * 50,
+                      Math.random() * 50,
+                      Math.random() * 50
+                    ]
+                  }
+                ]
+              }}
+              width={360}
+              height={220}
+              yAxisLabel={"kg"}
+              chartConfig={{
+                backgroundColor: 'white',
+                backgroundGradientFrom: 'white',
+                backgroundGradientTo: 'white',
+                color: (opacity = 1) => '#FF5722',
+                labelColor: (opacity = 100) => '#718093',
+                barPercentage: 0.5,
+                style: {
+                  borderRadius: 4
+                }
+              }}
+              style={{
+                marginTop: 24,
+                borderRadius: 4
+              }}
+            />
+          </View>
+
           <View style={styles.setoranContainer}>
             <View
               style={{
@@ -41,28 +78,46 @@ export default function Beranda() {
                 justifyContent: 'space-between',
                 alignItems: 'center',
                 marginTop: 20,
+                marginBottom: 20,
                 width: 360,
-                marginBottom: 24
               }}>
               <Text style={{ fontSize: 20, fontWeight: '700', color: '#416188' }}>Setoran</Text>
-              <Text style={{ alignItems: "center", color: '#8793A3' }}>Lihat semua</Text>
+              <TouchableOpacity>
+                <Text style={{ color: '#718093' }}>Lihat semua</Text>
+              </TouchableOpacity>
             </View>
-            <View style={styles.historySetoran}>
-              <View style={{ flexDirection: 'row', alignContent: 'space-between', alignItems: 'center' }}>
-                <View style={{ width: 185, height: 52, flexDirection: 'row', alignItems: 'center' }}>
-                  <Image source={require('../assets/images/garbage.png')} style={{ width: 52, height: 52, alignItems: 'center' }} />
-                  <View style={{ marginLeft: 8 }}>
-                    <Text>Trashbag ID 1304A327FA</Text>
-                    <Text>24/09/2019</Text>
-                  </View>
-                </View>
-                <View style={{ marginLeft: 81 }}>
-                  <Text>Proses</Text>
-                </View>
-              </View>
-            </View>
+            <View style={styles.historySetoran}></View>
+            <View style={styles.historySetoran}></View>
+            <View style={styles.historySetoran}></View>
           </View>
 
+          <View style={styles.tipsContainer}>
+            <View
+              style={{
+                flexDirection: 'row',
+                justifyContent: 'space-between',
+                alignItems: 'center',
+                marginTop: 20,
+                width: 360,
+              }}>
+              <Text style={{ fontSize: 20, fontWeight: '700', color: '#416188' }}>Tips</Text>
+            </View>
+            <SafeAreaView>
+              <View style={{ flexDirection: 'row' }}>
+                <TouchableOpacity >
+                  <View style={{ width: 180, height: 156 }}>
+                    <Image source={require('../assets/images/memilahSampah.png')} style={{ width: '100%', height: '100%' }} />
+                  </View>
+                </TouchableOpacity>
+                <View style={{ width: 180, height: 156 }}>
+                  <Image source={require('../assets/images/menggunakanTrashbag.png')} style={{ width: '100%', height: '100%' }} />
+                </View>
+                <View style={{ width: 180, height: 156 }}>
+                  <Image source={require('../assets/images/sampahMantan.png')} style={{ width: '100%', height: '100%' }} />
+                </View>
+              </View>
+            </SafeAreaView>
+          </View>
 
         </View>
       </ScrollView>
@@ -72,7 +127,6 @@ export default function Beranda() {
 
 const styles = StyleSheet.create({
   container: {
-    marginTop: 24,
     alignItems: 'center',
     justifyContent: 'center'
   },
@@ -80,7 +134,7 @@ const styles = StyleSheet.create({
     width: 360,
     height: 120,
     backgroundColor: '#8BC34A',
-    borderRadius: 7,
+    borderRadius: 4,
   },
   saldo: {
     width: 360,
@@ -88,8 +142,8 @@ const styles = StyleSheet.create({
     backgroundColor: '#689F38',
     flexDirection: 'row',
     alignItems: 'center',
-    borderTopLeftRadius: 7,
-    borderTopRightRadius: 7,
+    borderTopLeftRadius: 4,
+    borderTopRightRadius: 4,
     justifyContent: 'space-between',
   },
   levelTrashbag: {
