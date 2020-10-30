@@ -7,7 +7,7 @@ import { BarChart } from 'react-native-chart-kit';
 import { Text } from '../components/Themed';
 
 
-export default function Beranda() {
+export default function Beranda({ navigation }) {
   return (
     <SafeAreaView>
 
