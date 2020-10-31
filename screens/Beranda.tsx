@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { Image, StyleSheet, View } from 'react-native';
-import { ScrollView, TouchableOpacity } from 'react-native-gesture-handler';
+import { FlatList, ScrollView, TouchableOpacity } from 'react-native-gesture-handler';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { BarChart } from 'react-native-chart-kit';
 
@@ -10,7 +10,6 @@ import { Text } from '../components/Themed';
 export default function Beranda({ navigation }) {
   return (
     <SafeAreaView>
-
       <ScrollView>
         <View style={styles.container}>
           <View style={styles.dompetContainer}>
@@ -82,7 +81,7 @@ export default function Beranda({ navigation }) {
                 width: 360,
               }}>
               <Text style={{ fontSize: 20, fontWeight: '700', color: '#416188' }}>Setoran</Text>
-              <TouchableOpacity>
+              <TouchableOpacity onPress={() => navigation.navigate('Setoran')}>
                 <Text style={{ color: '#718093' }}>Lihat semua</Text>
               </TouchableOpacity>
             </View>
@@ -102,23 +101,20 @@ export default function Beranda({ navigation }) {
               }}>
               <Text style={{ fontSize: 20, fontWeight: '700', color: '#416188' }}>Tips</Text>
             </View>
-            <SafeAreaView>
-              <View style={{ flexDirection: 'row' }}>
-                <TouchableOpacity >
-                  <View style={{ width: 180, height: 156 }}>
-                    <Image source={require('../assets/images/memilahSampah.png')} style={{ width: '100%', height: '100%' }} />
-                  </View>
-                </TouchableOpacity>
+            <View style={{ flexDirection: 'row' }}>
+              <TouchableOpacity onPress={() => navigation.navigate('Artikel')}>
                 <View style={{ width: 180, height: 156 }}>
-                  <Image source={require('../assets/images/menggunakanTrashbag.png')} style={{ width: '100%', height: '100%' }} />
+                  <Image source={require('../assets/images/memilahSampah.png')} style={{ width: '100%', height: '100%' }} />
                 </View>
-                <View style={{ width: 180, height: 156 }}>
-                  <Image source={require('../assets/images/sampahMantan.png')} style={{ width: '100%', height: '100%' }} />
-                </View>
+              </TouchableOpacity>
+              <View style={{ width: 180, height: 156 }}>
+                <Image source={require('../assets/images/menggunakanTrashbag.png')} style={{ width: '100%', height: '100%' }} />
               </View>
-            </SafeAreaView>
+              <View style={{ width: 180, height: 156 }}>
+                <Image source={require('../assets/images/sampahMantan.png')} style={{ width: '100%', height: '100%' }} />
+              </View>
+            </View>
           </View>
-
         </View>
       </ScrollView>
     </SafeAreaView>

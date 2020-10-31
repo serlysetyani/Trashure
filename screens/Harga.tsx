@@ -3,7 +3,7 @@ import { StyleSheet, Image, View, SafeAreaView, ScrollView } from 'react-native'
 
 import { Text } from '../components/Themed';
 
-export default function TabOneScreen() {
+export default function Harga() {
     return (
         <SafeAreaView>
             <ScrollView>
