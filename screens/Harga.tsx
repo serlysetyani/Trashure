@@ -2,10 +2,12 @@ import * as React from 'react';
 import { StyleSheet, Image, View, SafeAreaView, ScrollView } from 'react-native';
 
 import { Text } from '../components/Themed';
+import Header from '../components/Header';
 
 export default function Harga() {
     return (
         <SafeAreaView>
+            <Header textHeader={'Harga'} />
             <ScrollView>
                 <View style={styles.container}>
                     <View style={styles.card}>
@@ -91,6 +93,7 @@ export default function Harga() {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
+        marginTop: 20,
         alignItems: 'center',
         justifyContent: 'center',
     },

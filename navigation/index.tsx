@@ -7,6 +7,8 @@ import Login from '../screens/Login';
 import Daftar from '../screens/Daftar';
 import DetailSetoran from '../screens/DetailSetoran';
 import Artikel1 from '../screens/TipsArtikel';
+import Pengaturan from '../screens/Pengaturan';
+import Notifikasi from '../screens/Notifikasi';
 import { RootStackParamList } from '../types';
 import BottomTabNavigator from './BottomTabNavigator';
 import LinkingConfiguration from './LinkingConfiguration';
@@ -32,9 +34,11 @@ function RootNavigator() {
     <Stack.Navigator>
       <Stack.Screen name="Login" component={Login} options={{ headerShown: false }} />
       <Stack.Screen name="Daftar" component={Daftar} />
-      <Stack.Screen name="Root" component={BottomTabNavigator} options={{ headerShown: false, title: 'Beranda' }} />
+      <Stack.Screen name="Root" component={BottomTabNavigator} options={{ headerShown: false, title: ' ' }} />
       <Stack.Screen name="Setoran" component={DetailSetoran} />
       <Stack.Screen name="Artikel" component={Artikel1} options={{ title: null }} />
+      <Stack.Screen name="Pengaturan" component={Pengaturan} />
+      <Stack.Screen name="Notifikasi" component={Notifikasi} />
     </Stack.Navigator>
   );
 }

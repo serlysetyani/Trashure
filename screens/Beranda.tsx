@@ -1,15 +1,16 @@
 import * as React from 'react';
 import { Image, StyleSheet, View } from 'react-native';
-import { FlatList, ScrollView, TouchableOpacity } from 'react-native-gesture-handler';
+import { ScrollView, TouchableOpacity } from 'react-native-gesture-handler';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { BarChart } from 'react-native-chart-kit';
 
 import { Text } from '../components/Themed';
-
+import HeaderBeranda from '../components/HeaderBeranda';
 
 export default function Beranda({ navigation }) {
   return (
     <SafeAreaView>
+      <HeaderBeranda textHeader={'Trashure'} />
       <ScrollView>
         <View style={styles.container}>
           <View style={styles.dompetContainer}>
@@ -123,8 +124,11 @@ export default function Beranda({ navigation }) {
 
 const styles = StyleSheet.create({
   container: {
+    flex: 1,
     alignItems: 'center',
-    justifyContent: 'center'
+    justifyContent: 'center',
+    marginBottom: 100,
+    marginTop: 20,
   },
   dompetContainer: {
     width: 360,
