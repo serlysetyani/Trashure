@@ -8,10 +8,10 @@ import Colors from '../constants/Colors';
 import useColorScheme from '../hooks/useColorScheme';
 import Beranda from '../screens/Beranda';
 import Penukaran from '../screens/Penukaran';
-import Scan from '../screens/Scan';
 import Harga from '../screens/Harga';
 import Akun from '../screens/Akun';
 import { BottomTabParamList, TabOneParamList, TabTwoParamList } from '../types';
+import IntroScan from '../screens/IntroScan';
 
 const BottomTab = createBottomTabNavigator<BottomTabParamList>();
 
@@ -37,8 +37,8 @@ export default function BottomTabNavigator() {
         }}
       />
       <BottomTab.Screen
-        name="Scan"
-        component={Scan}
+        name="IntroScan"
+        component={IntroScan}
         options={{
           tabBarIcon: ({ color }) => <TabBarIcon name="md-search" color={color} />,
         }}

@@ -78,8 +78,7 @@ export default function Harga() {
                                 justifyContent: 'space-between',
                                 alignItems: 'center',
                                 borderBottomRightRadius: 7,
-                                borderBottomLeftRadius: 7,
-                                marginBottom: 100
+                                borderBottomLeftRadius: 7
                             }} >
                             <Text style={{ fontSize: 20, marginLeft: 23, fontWeight: '600' }} >Sampah Kardus</Text>
                             <Text style={{ fontSize: 20, marginRight: 23, fontWeight: '600', color: '#FF5722' }}>Rp.4000/kg</Text>
