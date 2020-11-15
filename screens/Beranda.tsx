@@ -163,12 +163,11 @@ export default function Beranda({ navigation }) {
                   <Image source={require('../assets/images/memilahSampah.png')} style={{ width: '100%', height: '100%' }} />
                 </View>
               </TouchableOpacity>
-              <View style={{ width: 180, height: 156 }}>
-                <Image source={require('../assets/images/menggunakanTrashbag.png')} style={{ width: '100%', height: '100%' }} />
-              </View>
-              <View style={{ width: 180, height: 156 }}>
-                <Image source={require('../assets/images/sampahMantan.png')} style={{ width: '100%', height: '100%' }} />
-              </View>
+              <TouchableOpacity>
+                <View style={{ width: 180, height: 156 }}>
+                  <Image source={require('../assets/images/menggunakanTrashbag.png')} style={{ width: '100%', height: '100%' }} />
+                </View>
+              </TouchableOpacity>
             </View>
           </View>
         </View>

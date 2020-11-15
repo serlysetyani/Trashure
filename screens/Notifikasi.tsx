@@ -16,17 +16,16 @@ export default function TabStack({ navigation }) {
             initialRouteName="TabNotifikasi"
             tabBarOptions={{
                 activeTintColor: 'black',
-                fontWeight: '700',
                 inactiveTintColor: '#8BC34A',
                 style: {
                     backgroundColor: '#FFFFFF',
                 },
-                labelStyle: {
-                    textAlign: 'center',
-                },
                 indicatorStyle: {
                     borderBottomColor: '#87B56A',
                     borderBottomWidth: 2,
+                },
+                tabStyle: {
+                    borderTopWidth: 0
                 },
             }}>
             <Tab.Screen

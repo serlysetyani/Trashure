@@ -37,10 +37,11 @@ export default function BottomTabNavigator() {
         }}
       />
       <BottomTab.Screen
-        name="IntroScan"
+        name="introScan"
         component={IntroScan}
         options={{
           tabBarIcon: ({ color }) => <TabBarIcon name="md-search" color={color} />,
+          tabBarLabel: 'Scan'
         }}
       />
       <BottomTab.Screen
