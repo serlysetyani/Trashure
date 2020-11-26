@@ -21,7 +21,7 @@ export default function App({ navigation }) {
                 <View style={styles.slide} />
                 <Text style={{ marginTop: 10, color: '#B3B3B3', alignSelf: 'center' }}>atau masukkan kode ID Trashbag</Text>
                 <View style={styles.IDContainer}>
-                    <TextInput style={styles.IDInput} placeholder={'Masukkan ID'} underlineColorAndroid='transparent' />
+                    <TextInput style={styles.IDInput} placeholder={'Masukkan ID'} />
                     <TouchableOpacity style={styles.btnInput} onPress={() => navigation.navigate('Scan')}>
                         <Text style={styles.txtInput}>Input</Text>
                     </TouchableOpacity>

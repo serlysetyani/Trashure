@@ -54,10 +54,10 @@ export default function Beranda({ navigation }) {
               height={220}
               yAxisLabel={"kg"}
               chartConfig={{
-                backgroundColor: 'white',
+
                 backgroundGradientFrom: 'white',
                 backgroundGradientTo: 'white',
-                color: (opacity = 1) => '#FF5722',
+                color: (opacity = 0) => '#FF5722',
                 labelColor: (opacity = 100) => '#718093',
                 barPercentage: 0.5,
                 style: {
@@ -155,19 +155,26 @@ export default function Beranda({ navigation }) {
                 marginTop: 20,
                 width: 360,
               }}>
-              <Text style={{ fontSize: 20, fontWeight: '700', color: '#416188' }}>Tips</Text>
+              <Text style={{ fontSize: 20, fontWeight: '700', color: '#416188', padding: 10 }}>Tips</Text>
             </View>
             <View style={{ flexDirection: 'row' }}>
-              <TouchableOpacity onPress={() => navigation.navigate('Artikel')}>
-                <View style={{ width: 180, height: 156 }}>
-                  <Image source={require('../assets/images/memilahSampah.png')} style={{ width: '100%', height: '100%' }} />
-                </View>
-              </TouchableOpacity>
-              <TouchableOpacity>
-                <View style={{ width: 180, height: 156 }}>
-                  <Image source={require('../assets/images/menggunakanTrashbag.png')} style={{ width: '100%', height: '100%' }} />
-                </View>
-              </TouchableOpacity>
+              <ScrollView horizontal={true}>
+                <TouchableOpacity onPress={() => navigation.navigate('Artikel')}>
+                  <View style={{ width: 180, height: 156 }}>
+                    <Image source={require('../assets/images/memilahSampah.png')} style={{ width: '100%', height: '100%' }} />
+                  </View>
+                </TouchableOpacity>
+                <TouchableOpacity>
+                  <View style={{ width: 180, height: 156 }}>
+                    <Image source={require('../assets/images/menggunakanTrashbag.png')} style={{ width: '100%', height: '100%' }} />
+                  </View>
+                </TouchableOpacity>
+                <TouchableOpacity>
+                  <View style={{ width: 180, height: 156 }}>
+                    <Image source={require('../assets/images/sampahMantan.png')} style={{ width: '100%', height: '100%' }} />
+                  </View>
+                </TouchableOpacity>
+              </ScrollView>
             </View>
           </View>
         </View>

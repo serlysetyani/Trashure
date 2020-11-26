@@ -11,9 +11,6 @@ export default function Penukaran({ navigation }) {
     <SafeAreaView>
       <Header textHeader={'Penukaran'} />
       <View style={styles.container}>
-        <Collapsible collapsed={isCollapsed}>
-
-        </Collapsible>
       </View>
     </SafeAreaView >
 
