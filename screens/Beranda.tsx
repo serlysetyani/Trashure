@@ -54,7 +54,6 @@ export default function Beranda({ navigation }) {
               height={220}
               yAxisLabel={"kg"}
               chartConfig={{
-
                 backgroundGradientFrom: 'white',
                 backgroundGradientTo: 'white',
                 color: (opacity = 0) => '#FF5722',
