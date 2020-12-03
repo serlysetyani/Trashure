@@ -10,10 +10,12 @@ export default function Akun({ navigation }) {
             <Header textHeader={'Akun'} />
             <ScrollView>
                 <View style={styles.profilContainer}>
-                    <View style={styles.avaContainer}>
-                        <Image source={require('../assets/images/profil.png')} style={{ width: 100, height: 100, alignSelf: 'center', top: -80 }} />
-                        <Text style={{ alignSelf: 'center', top: -80, fontWeight: '700', fontSize: 18, color: '#416188' }}>Serly Setyani</Text>
-                    </View>
+                    <TouchableOpacity onPress={() => navigation.navigate('EditProfil')} style={{ width: 100, height: 100, alignSelf: 'center' }}>
+                        <View style={styles.avaContainer}>
+                            <Image source={require('../assets/images/profil.png')} style={{ width: 100, height: 100, alignSelf: 'center', top: -80 }} />
+                        </View>
+                    </TouchableOpacity>
+                    <Text style={{ alignSelf: 'center', top: -80, fontWeight: '700', fontSize: 18, color: '#416188' }}>Serly Setyani</Text>
                     <View style={styles.badgeContainer}>
                         <View style={{ flexDirection: 'row', justifyContent: 'space-between', top: 21 }}>
                             <View style={styles.level}>
@@ -33,7 +35,7 @@ export default function Akun({ navigation }) {
                     <View style={styles.dataUserContainer}>
                         <View style={styles.nomorHpContainer}>
                             <Text style={{ color: '#A8A8A8', marginBottom: 10 }}>Nomor HP</Text>
-                            <Text style={{ fontSize: 14 }}>08992220222</Text>
+                            <Text style={{ fontSize: 14 }}>081333518083</Text>
                         </View>
                         <View style={styles.emailContainer}>
                             <Text style={{ color: '#A8A8A8', marginBottom: 10, marginTop: 29 }}>Email</Text>

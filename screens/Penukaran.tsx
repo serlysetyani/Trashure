@@ -1,16 +1,15 @@
 import * as React from 'react';
-import { StyleSheet, View, SafeAreaView, ScrollView, Image } from 'react-native';
-import Collapsible from 'react-native-collapsible';
+import { StyleSheet, View, SafeAreaView, ScrollView, Text, Image } from 'react-native';
 
-import { Text } from '../components/Themed';
 import Header from '../components/Header';
-import { color } from 'react-native-reanimated';
+import Accordions from '../components/Accordions'
 
 export default function Penukaran({ navigation }) {
   return (
     <SafeAreaView>
       <Header textHeader={'Penukaran'} />
       <View style={styles.container}>
+        <Accordions />
       </View>
     </SafeAreaView >
 

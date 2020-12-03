@@ -13,6 +13,7 @@ import { RootStackParamList } from '../types';
 import BottomTabNavigator from './BottomTabNavigator';
 import LinkingConfiguration from './LinkingConfiguration';
 import Scan from '../screens/Scan';
+import EditProfil from '../screens/EditProfil';
 
 // If you are not familiar with React Navigation, we recommend going through the
 // "Fundamentals" guide: https://reactnavigation.org/docs/getting-started
@@ -41,6 +42,7 @@ function RootNavigator() {
       <Stack.Screen name="Pengaturan" component={Pengaturan} />
       <Stack.Screen name="Notifikasi" component={Notifikasi} />
       <Stack.Screen name="Scan" component={Scan} options={{ title: null, headerTransparent: 'True' }} />
+      <Stack.Screen name="EditProfil" component={EditProfil} options={{ title: 'Edit Akun' }} />
     </Stack.Navigator>
   );
 }
