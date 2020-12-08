@@ -12,6 +12,7 @@
     "preset": "jest-expo"
   },
   "dependencies": {
+    "@ercpereda/react-native-accordion": "^2.0.6",
     "@expo/vector-icons": "^10.0.0",
     "@gapur/react-native-accordion": "^1.0.5",
     "@react-native-community/masked-view": "0.1.10",
@@ -36,6 +37,7 @@
     "react-native-bottomsheet-reanimated": "0.0.22",
     "react-native-chart-kit": "^6.6.1",
     "react-native-collapsible": "^1.5.3",
+    "react-native-collapsible-list": "^2.2.2",
     "react-native-gesture-handler": "~1.7.0",
     "react-native-paper": "^4.4.1",
     "react-native-reanimated": "~1.13.0",

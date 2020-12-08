@@ -1070,6 +1070,11 @@
   dependencies:
     "@types/hammerjs" "^2.0.36"
 
+"@ercpereda/react-native-accordion@^2.0.6":
+  version "2.0.6"
+  resolved "https://registry.yarnpkg.com/@ercpereda/react-native-accordion/-/react-native-accordion-2.0.6.tgz#a4d16c3861fd9b4adf5e6e1e0b46b2714b9f7dc6"
+  integrity sha512-1WmOP2CefcN1QD+18HQLlAepk6bLIQkPmoDKrIcZOaNL3U/qg3VY7JfY3V0AKMXpAXKcZembt9PDQYmJzBqp3Q==
+
 "@expo/babel-preset-cli@0.2.18":
   version "0.2.18"
   resolved "https://registry.yarnpkg.com/@expo/babel-preset-cli/-/babel-preset-cli-0.2.18.tgz#136acf8a0efe259e29ebc614b68552e5acb47d86"
@@ -6922,6 +6927,11 @@ react-native-chart-kit@^6.6.1:
     lodash "^4.17.13"
     paths-js "^0.4.10"
     point-in-polygon "^1.0.1"
+
+react-native-collapsible-list@^2.2.2:
+  version "2.2.2"
+  resolved "https://registry.yarnpkg.com/react-native-collapsible-list/-/react-native-collapsible-list-2.2.2.tgz#b3b65d9b03896e954c6566d05c477b29c21f8a8a"
+  integrity sha512-u+Ic3BUkL0FD0pa2MxSmIZkj9qISY3708TYZuPcKx1495BnYYpjqMiRn/SASveu41tvaUrKpR4Th8EueUiZRHw==
 
 react-native-collapsible@^1.5.3:
   version "1.5.3"

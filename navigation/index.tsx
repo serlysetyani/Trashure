@@ -2,6 +2,8 @@ import { NavigationContainer, DefaultTheme, DarkTheme } from '@react-navigation/
 import { createStackNavigator } from '@react-navigation/stack';
 import * as React from 'react';
 import { ColorSchemeName } from 'react-native';
+import { Provider as PaperProvider } from 'react-native-paper';
+
 
 import Login from '../screens/Login';
 import Daftar from '../screens/Daftar';
@@ -33,6 +35,7 @@ const Stack = createStackNavigator<RootStackParamList>();
 
 function RootNavigator() {
   return (
+    <PaperProvider>
     <Stack.Navigator>
       <Stack.Screen name="Login" component={Login} options={{ headerShown: false }} />
       <Stack.Screen name="Daftar" component={Daftar} />
@@ -44,5 +47,6 @@ function RootNavigator() {
       <Stack.Screen name="Scan" component={Scan} options={{ title: null, headerTransparent: 'True' }} />
       <Stack.Screen name="EditProfil" component={EditProfil} options={{ title: 'Edit Akun' }} />
     </Stack.Navigator>
+    </PaperProvider>
   );
 }
