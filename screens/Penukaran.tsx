@@ -17,7 +17,7 @@ export default function Penukaran({ navigation }) {
 }
 
 const styles = StyleSheet.create({
-  container:{
+  container: {
     marginTop: 30
   }
 });
