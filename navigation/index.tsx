@@ -16,6 +16,8 @@ import BottomTabNavigator from './BottomTabNavigator';
 import LinkingConfiguration from './LinkingConfiguration';
 import Scan from '../screens/Scan';
 import EditProfil from '../screens/EditProfil';
+import KonfirmasiPenukaran from '../screens/KonfirmasiPenukaran';
+import PenukaranBerhasil from '../screens/PenukaranBerhasil';
 
 // If you are not familiar with React Navigation, we recommend going through the
 // "Fundamentals" guide: https://reactnavigation.org/docs/getting-started
@@ -36,17 +38,19 @@ const Stack = createStackNavigator<RootStackParamList>();
 function RootNavigator() {
   return (
     <PaperProvider>
-    <Stack.Navigator>
-      <Stack.Screen name="Login" component={Login} options={{ headerShown: false }} />
-      <Stack.Screen name="Daftar" component={Daftar} />
-      <Stack.Screen name="Root" component={BottomTabNavigator} options={{ headerShown: false, title: ' ' }} />
-      <Stack.Screen name="Setoran" component={DetailSetoran} />
-      <Stack.Screen name="Artikel" component={Artikel1} options={{ title: null }} />
-      <Stack.Screen name="Pengaturan" component={Pengaturan} />
-      <Stack.Screen name="Notifikasi" component={Notifikasi} />
-      <Stack.Screen name="Scan" component={Scan} options={{ title: null, headerTransparent: 'True' }} />
-      <Stack.Screen name="EditProfil" component={EditProfil} options={{ title: 'Edit Akun' }} />
-    </Stack.Navigator>
+      <Stack.Navigator>
+        <Stack.Screen name="Login" component={Login} options={{ headerShown: false }} />
+        <Stack.Screen name="Daftar" component={Daftar} />
+        <Stack.Screen name="Root" component={BottomTabNavigator} options={{ headerShown: false, title: ' ' }} />
+        <Stack.Screen name="Setoran" component={DetailSetoran} />
+        <Stack.Screen name="Artikel" component={Artikel1} options={{ title: null }} />
+        <Stack.Screen name="Pengaturan" component={Pengaturan} />
+        <Stack.Screen name="Notifikasi" component={Notifikasi} />
+        <Stack.Screen name="Scan" component={Scan} options={{ title: null, headerTransparent: 'True' }} />
+        <Stack.Screen name="EditProfil" component={EditProfil} options={{ title: 'Edit Akun' }} />
+        <Stack.Screen name="KonfirmasiPenukaran" component={KonfirmasiPenukaran} options={{ title: 'Konfirmasi' }} />
+        <Stack.Screen name="PenukaranBerhasil" component={PenukaranBerhasil} options={{ headerShown: false }} />
+      </Stack.Navigator>
     </PaperProvider>
   );
 }

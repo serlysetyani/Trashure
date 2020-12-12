@@ -1,18 +1,17 @@
 import * as React from 'react';
-import { StyleSheet, View, Image, Button } from 'react-native';
+import { StyleSheet, View, Image, Button, TouchableOpacity } from 'react-native';
 
 import { Text } from '../components/Themed';
 
-export default function PenukaranBerhasil() {
+export default function PenukaranBerhasil({ navigation }) {
     return (
         <View style={styles.container}>
-            <View>
-                <Image source={require('../assets/images/checked.png')} style={{ width: 80, height: 80 }} />
-                <Text style={{ fontWeight: '700', fontSize: 24 }}>Berhasil</Text>
-                <Text style={{ color: '#737373' }}>Terima kasih telah melakukan penukaran saldo</Text>
-                <Text style={{ color: '#737373' }}>Sisa saldo anda adalah Rp.144.000</Text>
-                <Button title={'Kembali'} style={{ color: 'white', }} />
-            </View>
+            <Image source={require('../assets/images/checked.png')} style={styles.imgChecked} />
+            <Text style={styles.txtBerhasil}>Berhasil</Text>
+            <Text style={styles.messages}>Terima kasih telah melakukan penukaran saldo {"\n"} Sisa saldo anda Rp. 144.000</Text>
+            <TouchableOpacity style={styles.btnKembali} onPress={() => navigation.navigate('Penukaran')}>
+                <Text style={{ color: '#FFF', fontSize: 18, fontWeight: '700', alignSelf: 'center', top: 18 }}>Kembali</Text>
+            </TouchableOpacity>
         </View>
     );
 }
@@ -23,13 +22,25 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'center',
     },
-    title: {
-        fontSize: 20,
-        fontWeight: 'bold',
+    imgChecked: {
+        width: 84,
+        height: 84
     },
-    separator: {
-        marginVertical: 30,
-        height: 1,
-        width: '80%',
+    txtBerhasil: {
+        fontSize: 24,
+        fontWeight: '700',
+        marginTop: 28
     },
+    messages: {
+        textAlign: 'center',
+        marginTop: 28
+    },
+    btnKembali: {
+        width: 221,
+        height: 56,
+        backgroundColor: '#8BC34A',
+        alignSelf: 'center',
+        borderRadius: 4,
+        marginTop: 36
+    }
 });
